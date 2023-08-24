@@ -48,6 +48,10 @@ $ sudo service ssh restart
 
 SSH 설정 변경만으로도 SSH 접속이 비활성화 되지만, /etc/passwd 파일에서 `nasuser`의 마지막 항목인 `/bin/bash`를 `/bin/false`로 수정하여 bash도 비활성화 한다.
 
+## Results
+
+SFTP를 이용하여 서버에 접속하면 클라이언트에게는 `storage` 디렉토리만 보이며, `pwd` 커맨드를 실행해보면 현재 디렉토리를 루트(`/`)로 인식한다는 것을 확인할 수 있다.
+
 ## Reference
 
 * [Stackoverflow: Allow SFTP but disallow SSH?](https://serverfault.com/questions/354615/allow-sftp-but-disallow-ssh)
